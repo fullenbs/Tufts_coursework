@@ -1,0 +1,5 @@
+Prof: Christoph Borgers
+Class: Nonlinear Dynamics and Chaos 
+Textbook: Dynamics by Strogatz
+
+Notes: No HWs, just primarily these engagement notes that I listed

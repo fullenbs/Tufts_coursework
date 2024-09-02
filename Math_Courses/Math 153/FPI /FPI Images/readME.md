@@ -1,0 +1,2 @@
+All pictures shown are calculated using the function f(x) = 4x(1-x). The 5 fixed points of the function are 0, 1/4, 1/2, 3/4, and 1. 
+To explain mathematically, starting at a fixed point will lead to the same point, as at a fixed point, f(x) = x, which in this case are 0 and 3/4. Looking at f(x), f(0) = f(1) and f(1/4) = f(3/4), so 1/4 and 1 will lead to a fixed point. f(1/2) = 1, and f(1) = 0, so it converges. 
