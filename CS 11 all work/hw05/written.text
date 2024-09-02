@@ -1,0 +1,14 @@
+Written #1
+Test number     | i | array_len | array[i]     | sum | 
+Before 1st test | 0 | 6         |Uninitialized |0    |
+2nd test        | 1 | 6         |8             |8    |
+3rd test        | 2 | 6         |10            |18   |
+4th test        | 3 | 6         |3             |21   |
+5th test        | 4 | 6         |2             |23   |
+6th test        | 5 | 6         |9             |32   |
+7th test        | 6 | 6         |0             |32   |
+
+---------------------------------------
+Written #2
+
+The homework took me about 4.5 hours to complete 

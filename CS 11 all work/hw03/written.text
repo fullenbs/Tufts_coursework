@@ -1,0 +1,63 @@
+Written #1
+
+Three benefits of functions: 
+1. Functions make your code easier to read by breaking it up into parts.
+
+2. Functions allow you to make code reusable and to write more general 
+functions that have multiple applications. 
+
+3. With functions, you can use recursion! 
+
+-------------------------------------------------------------------------------
+Written #2
+
+Pseudocode for pattern.cpp:
+Variables needed: Need two strings, and a number that the user provides for the
+number of lines the pattern is. 
+
+Step 1:
+Get user input 
+
+Step 2:
+Since even and odd lines have different patterns, make two strings that
+represent the base pattern that will be repeated. 
+
+Step 3: 
+Create a full line, using a recursive function that will form a string that is
+5 copies of the two input strings put together. End up with one for even lines 
+and one for odd lines.
+
+Step 4: 
+Create another recursive count down function, that runs a modulus if statement
+to make sure it prints out the correct strings for even and odd lines.
+
+-------------------------------------------------------------------------------
+Written #3
+Function 1: 
+The function appears to return the smaller of two numbers. There are three 
+cases to consider, the first is a = b. If a = b, the numbers are the same. The 
+second case, a < b. If a < b, this will be true until the a = b. This is 
+because for each iteration, b decreases by 1 until a = b. Then it returns a, 
+which is the smaller number. The else statement is doing the exact same 
+process, except it's for when b is the smaller number.
+
+
+Function 2: 
+The function determines the sum of a, b, and c. Each else if or else statement 
+decreases a, b or both by 1 and increases c by the same amount. If a or b equal 
+0, they have nothing to transfer over, so they remain the same. The process 
+repeats until a and b equal 0, as that means the integer values of a and b have 
+been added to c. 
+
+Function 3: (JFFE) 
+I'm pretty confident that the function finds the largest common factor 
+between two numbers. 
+
+If a and b share a common multiple, subtracting one from the other will 
+eventually result in said common multiple. If a and b share no common factor 
+other than 1, eventually you will keep returning (a, b-a) and (a- b, b), and as 
+the inputs for a and be get smaller, they eventually approach and equal one. 
+-------------------------------------------------------------------------------
+Written #4
+
+It took me about 4.5 hours to complete the entire assignment. 

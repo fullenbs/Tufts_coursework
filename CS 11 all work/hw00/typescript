@@ -1,0 +1,27 @@
+Script started on Fri 10 Sep 2021 03:27:34 PM EDT
+vm-hw00{sfulle03}37: hostname
+vm-hw00
+vm-hw00{sfulle03}38: who
+sfulle03 pts/1        2021-09-10 15:25 (10.245.146.141)
+sfulle03 pts/2        2021-09-10 15:27
+gfield01 pts/4        2021-09-10 14:55 (10.245.45.218)
+elaton01 pts/9        2021-09-10 14:56 (24.171.220.175)
+estein14 pts/12       2021-09-10 13:49 (static-98-118-98-77.bstnma.fios.verizon.net)
+vm-hw00{sfulle03}39: w
+ 15:27:53 up 2 days, 22:47,  5 users,  load average: 0.01, 0.09, 0.32
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+sfulle03 pts/1    10.245.146.141   15:25    1.00s  0.09s  0.00s script
+sfulle03 pts/2                     15:27    1.00s  0.07s  0.03s w
+gfield01 pts/4    10.245.45.218    14:55   32:01   0.13s  0.13s -tcsh
+elaton01 pts/9    24.171.220.175   14:56   31:05   0.08s  0.08s -tcsh
+estein14 pts/12   static-98-118-98 13:49   17:21   0.14s  0.19s sshd: estein14 [priv]
+vm-hw00{sfulle03}40: pwd
+/h/sfulle03/cs11/hw00
+vm-hw00{sfulle03}41: ls -l
+total 4
+-rw-------. 1 sfulle03 games 245 Sep 10 15:26 hello.cpp
+-rw-------. 1 sfulle03 games   0 Sep 10 15:27 typescript
+vm-hw00{sfulle03}42: exit
+exit
+
+Script done on Fri 10 Sep 2021 03:28:00 PM EDT

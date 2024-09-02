@@ -1,0 +1,27 @@
+Written #1:
+
+I wrote pseudocode for make_change.cpp()
+variables needed:
+change - total money
+quarter, dime, nickel, penny- Variable for coins w/ value given to it
+
+Steps to get coins:
+Need formula to find minimum amount of coins used. Not really many choices, just follow the formula.
+Step 1: 
+- Starting with largest coin, find max amount that can be used using remainder
+- Subtract that number of coins times it's value, to get change left over
+
+Step 2:
+- Repeat step 1 with each coin until done.
+
+Step 3:
+- Display outputs
+
+
+--------------------------------------------------------------------------------
+Written #2: 
+One issue I had was with yoda.cpp was getting the right input. Initially, when I would type in the four words, my output only had the first word. I looked at how c++ read strings, and learned that it uses the space bar to mark the end of it. As a work around, I initially used the getline() function, as that got the whole sentence, but figured out quickly that the approach did not work. Eventually, I realized that I could assign multiple variables to the same input line, which allowed me to get all of the words while also assigning them to a variable. 
+
+--------------------------------------------------------------------------------
+Written #3: 
+I spent about 3-4 hours on the entire assignment. 

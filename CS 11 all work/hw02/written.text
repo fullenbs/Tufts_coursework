@@ -1,0 +1,57 @@
+Written #1
+Psuedocode for guess.cpp:
+
+Variables needed: computer number which the user is trying to guess, the number 
+that the user gives as a guess, and the amount of guesses made.
+
+Step 1: Get a random number for the computer between 5 and 15, inclusive. 
+
+Step 2: Have user enter a number through a function
+
+Step 3: Create comparison function 
+    If correct: 
+        End program, say you got it
+    If incorrect: 
+        Tell them higher or lower 
+        Back to step 2 
+    If at 3 guesses:
+        End program, say they failed to get it
+
+-------------------------------------------------------------------------------
+Written #2
+Fixed version:
+
+#include <iostream>
+using namespace std;
+
+int main(){ 
+    int age = 50;
+    age = age + 50;
+    string name = "Sally";
+    string job = "Super Star";
+    if(name == "Sally"&& job == "Super Star" ){
+        cout << "Hi Sally" << endl;
+        cout << "You are a super star!!" << endl;
+    }
+    if(age == 100 || (age != 42 && name != job)){
+        cout << "Have a nice day!" << endl;
+    } else{
+        cout << "This isn't Sally...Goodbye!!" << endl;
+    }
+    return 0;
+}
+
+-------------------------------------------------------------------------------
+Written #3 
+I ran tests at different levels for rps.cpp. First, I tested that I was 
+generating a random number correctly. To do this, I generated a bunch of random 
+numbers using the same formula and made sure that they all fell within 0 and 2, 
+inclusively. Then, I wanted to make sure that the computer displayed the proper 
+result for all possible outcomes. To do this, I commented out the randomness 
+and ran 9 tests, for each possible combination of rock, paper, and scissors 
+between the player and computer. Finally, I reintroduced the randomness and ran 
+the program through 11test to make sure it was functioning properly. 
+
+-------------------------------------------------------------------------------
+Written #4
+It took me about 3.5 hours to complete the assignment.

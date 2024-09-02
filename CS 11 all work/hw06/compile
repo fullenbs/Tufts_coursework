@@ -1,0 +1,1 @@
+g++ -o animaldb -g -Wall -Werror -Wextra animaldb.cpp Animal.cpp Animal_Array_List.cpp

@@ -1,0 +1,52 @@
+HW 6
+written.text
+
+Name: Scott Fullenbaum
+Login ID: sfulle03
+
+
+Written #1:  How I tested my code
+---------------------------------
+Testing for step #1:
+    To test my Animal class, I performed three tests. To first test my 
+constructors, I created two different animals, one that took in no input and 
+the other that used the file to get the inputs. Then from main, I output the 
+result of each value from the constructor using the member functions to make 
+sure they were working properly. 
+
+Testing for steps #2 and #3: 
+I ended up combining my tests for #2 and #3, because once I built the 
+Animal_Array_List.cpp, I thought the best way to test it would be to read in 
+the information from the database files. I used initialize_DB to create the 
+arraylist, then I printed it out. To check that it worked correctly, I ran it 
+with short_animals.db, and made sure each output manually matched what was in 
+the file. My testing caught a bug where the array list wasn't being expand 
+properly, and to fix it, I realized I had to double m_capacity when expanding 
+so the new capacity would be stored properly. I then tested it on animals.db, 
+but  just made sure the last couple of entries matched the information from the 
+file, as it would have taken too long to check for every animal. After testing 
+for steps #2 and #3, I ran 11test. 
+    Additionally, I ended up determining my deconstructor worked by 
+creating a bug where I deleted my arraylist in main in addition to in the 
+deconstructor. Since this was deleting it twice, I kept getting segmentation 
+fault errors, and by only deleting the arraylist in the deconstructor, I saw it 
+was able to work correctly.
+
+
+Testing for step #4:
+    To test if my classification function was correct, I ran my program several 
+times on short_animals.db and animals.db, running it with different 
+classifications as inputs. I then checked each file for which animals fell 
+under a specific classification, and made sure that the correct outputs were 
+displayed. For animal.db, I checked that a couple of them for each 
+classification matched, as again, the file is too big for me to cross reference 
+every data point. I also ran 11test again, just to make sure that I didn't make 
+any mistakes with implementing do_classification_report, as I had to implement 
+a conditional in main so that do_classification_report could run at the right 
+time.
+
+
+Written #2:  How much time I spent on this assignment
+-----------------------------------------------------
+I think I spent around 4 hours on this assignment.
+
