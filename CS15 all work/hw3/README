@@ -1,0 +1,90 @@
+/*****************************************************************************/
+* HW 3: BST
+* Comp 15 Spring 2022
+* README
+* Author: Scott Fullenbaum sfulle03
+/******************************************************************************/
+
+Purpose:
+----------------
+Code a Binary Search Tree and be able to perform and retrieve data about it.
+
+Acknowledgements:
+-----------------
+c++ reference for how xor works. 
+
+Files provided:
+------------------
+BinarySearchTree.h: Header file for the BinarySearchTree class. Contains 
+all function and private variable declarations for the class.
+
+BinarySearchTree.cpp: Implementation of the BinarySearchTree class.
+
+unit_tests.h: Contains all unit_tests performed on the code.
+
+hw3.cpp: Make a BST and performs some operations on it. 
+
+Makefile: Makes the submission and hw3
+
+Compilation:
+-----------------
+make hw3 - Makes hw3 executable
+unit_tests - runs unit_tests
+
+Testing:
+-----------------
+Throughout my testing, I relied on the print_tree() function to help. As I went,
+it was useful to see the tree before and after operations on the tree were 
+performed, especially with insert() and remove(). For most of the functions, 
+there were two general cases that I thought of for each function, either 
+being something return true/false, or how it handled an empty vs. a nonempty
+tree. The specifics are explained in unit_tests.h. The function that required
+the most testing was remove(). I broke remove() into as many cases as possible.
+I had remove() broken up into 3 main cases: The node being removed had 0, 1, 
+or 2 children. For 0 children, (or leaf) the two subcases were the node
+being the root or not the root. For 1 child, the two subcases, were also the 
+node being the root or not the root. For 2 children, the two main subcases
+are the node being removed being the root or not the root. Among each subcase,
+I broke those scenarios down into the node replacing the removed node having
+0 or 1 children. I managed to figure this out just by drawing a bunch of BSTs
+that had 2 children and thinking through different cases. Once I had each of 
+the scenarios, I wrote at least one test for each of them, to make sure that 
+they worked correctly. Though I used assert(), I relied on print_tree() to 
+make sure they matched, as I wanted to view the entire tree. In the end, I had
+11 tests for testing remove() alone. I also diff tested my code with the 
+reference, and had no errors.
+
+Questions:
+-----------------
+1) My remove function will rely on findmin(), as I need to find the minimum 
+node on the right side when doing remove() with two children, as that is what
+the spec outlines. 
+
+2) Yes, because if the tree is empty, the function would return nullptr, and 
+there isn't really a value associated with that.
+
+3) Under the current implementation, it would return nullptr.
+
+4) 
+find_min(node):
+    if node  == null:
+        return null
+    If node->left == null:
+        return node
+    return find_min(child->left)
+
+5)
+find_max(node):
+    if node == null:
+        return root
+    If node->right == null:
+        return node
+    return find_min(child->right)
+
+6)
+post_order_delete(node):
+    if node == nullptr:
+        return root
+    post_order_delete(left child)
+    post_order_delete(right child)
+    delete node

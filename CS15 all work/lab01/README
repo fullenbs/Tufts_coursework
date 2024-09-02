@@ -1,0 +1,93 @@
+/*******************************************************************************
+* LAB 1: unit_test and ArrayList
+* Comp 15 Spring 2021 
+* README
+* Author: Scott Fullenbaum sfulle03
+*******************************************************************************/
+
+NOTE: Below is an example of a README that you can use for your future labs and
+assignments. Steal this format! It will save you points later. Read through the
+file and fill in the TODO's.
+
+Program Purpose:
+---------------
+
+    TODO: Purpose of the program is to create a class for the purpose of storing an ArrayList of integers.
+
+Compile/run:
+-----------
+
+    There is no need to compile this assignment.
+
+    Run using the command "unit_test"
+
+
+Acknowledgments:
+---------------
+
+    TODO: Shoutout to one of my lab TAs, Mateo, for the help.
+
+Files:
+-----
+
+ArrayList.h: Interface for a simple ArrayList Class.
+
+ArrayList.cpp: Implementation of a simple ArrayList Class.
+    The default constructor for this class initializes an ArrayList to a size of
+    0, and a capacity of 10. 
+
+unit_tests.h: A unit testing file for the ArrayList Class. 
+    Runs in conjunction with the unit_test framework to allow for testing of 
+    individual functions.
+
+Makefile: File to build the program.
+
+
+Data Structures:
+---------------
+
+    This main data structure of this lab is an ArrayList, which is a dynamically
+    expanding array. If the number of items is ever equal to the capacity, the
+    array will automatically expand, allowing for an arbitrary number of 
+    elements to be inserted into the ArrayList.
+
+
+Testing:
+-------
+
+   To test, I used unit_tests.h, and wrote an assert statement to make sure each function worked. Once I was sure that the test was successful, I then thought it would be okay to use it for any later tests. Each test is written to specifically test one functon. I don't think there are any edge cases that I failed to really account for, but more testing could reveal that. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

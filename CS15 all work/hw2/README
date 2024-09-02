@@ -1,0 +1,95 @@
+/*****************************************************************************/
+* HW 2: LinkedList
+* Comp 15 Spring 2021 
+* README
+* Author: Scott Fullenbaum sfulle03
+******************************************************************************/
+
+Program Purpose:
+---------------
+The purpose of the program is to create a linked list that can store a group of
+characters and be manipulated.
+
+Compile/run:
+-----------
+I compiled and tested the program using unit_test, though the makefile would 
+also compile it. 
+
+Acknowledgements:
+----------------
+I'd like to thank Matt for helping me figure out a bug in insertAt() that I
+had spent hours trying to fix to no avail.
+
+
+Files provided:
+---------------
+
+CharLinkedList.h: Interface for the CharLinkedList.
+
+CharLinkedList.cpp: Implementation of the CharLinkedList Class.
+
+unit_tests.h: A unit testing file for the ArrayList Class. 
+Runs in conjunction with the unit_test framework to allow for testing of 
+individual functions.
+
+Makefile: File used to build the program
+
+README: This file
+
+
+Data Structures:
+---------------
+The data structure used in this algorithm is a linked list, which allows the 
+user to store an ordered list. A key advantage of using linked lists is that
+they can change size. Additionally, it is generally more efficient to insert
+a node in a LinkedList rather than an ArrayList, as ArrayLists require you to
+move many items in the ArrayList, while in a LinkedList, you only have to mess
+with a couple of nodes when inserting or deleting. 
+
+One disadvantage of using a linked list is that it requires more memory than
+an ArrayList, because we need additional pointers to store each node. Another
+disadvantage of a linked list is that it is inefficient to retrieve a value
+at a certain node, as you have to go through the node before/after it, 
+depending on if you have a front and back node implemented, to retrieve any 
+value.
+
+Testing:
+-------
+I ported over most of my testing from CharArrayList to CharLinkedList, as 
+both data structures required exactly the same functions. My testing 
+methodology was to think of base cases, then any specific scenarios that I 
+would need to account for. I broke my tests into seperate functions so that
+generally, each test was covering a certain case from a specific function. In 
+practice, this wasn't perfectly executed, and the functions that required more
+tests for me to find errors often got more testing functions. Additonally, I 
+failed some hw1 tests, which I incorporated into this homework. I also relied 
+heavily on using a main.cpp file, which by the time of this submission, has 
+been deleted to avoid any issues. My code had a lot of memory issues and seg 
+faults that were not clear or visible in unit_test. The main purpose of my main
+file was to track down memory leaks, as through running Valgrind in main, I got
+a better picture of where my seg faults and memory leaks were occuring. Also,
+most of my memory errors were cascading issues that would cause unit_test to
+take signifigantly longer to compile, and cause multiple tests to fail,
+so there was no reason to test everything at once. Through main.cpp, I was able
+to quickly test small changes in my code to easily isolate and fix bugs. 
+
+Additional Questions:
+--------------------
+Q1)
+None of the functions felt easier to make in the ArrayList rather than the 
+LinkedList. The simplier functions like size() and isEmpty() were the same
+difficulty to implement.
+
+Q2)
+All of the functions that involved maniuplating the linked list felt a lot 
+harder to implement rather than their array list equivalents. I felt that no
+matter how much I would draw out the linked list and attempt to get the steps
+as to how pointers would be reallocated, I felt that it took a lot of time to
+be able to properly implement it in code. When coding these, I also ran into a
+lot of Valgrind issues that were incredibly difficult to isolate especially 
+within the unit_test framework. 
+
+Q3)
+There shouldn't be any changes a client would have to make. The ArrayList and 
+LinkedList implemented carry out the exact same functions with the exact same
+inputs.

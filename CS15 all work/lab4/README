@@ -1,0 +1,63 @@
+/**********************************************************
+* Lab 3: Circular Lists
+* Comp 15 Fall 2019 
+* README
+* Author: Tanya Sinha
+* Modified: Alice Dempsey, August 2019
+*           Juliana Vega, January 2020
+*********************************************************/
+
+Program Purpose: This lab assignment is to learn about CircularBuffers. 
+The idea of a circular array is that the end of the array “wraps around” 
+to the start of the array. 
+In this lab, Comp 15 students are helping the DJ filter songs using a 
+Stack (last in first out) and a Queue. Both the Stack 
+and Queue (first in first out) are implemented using an object of 
+CircularBuffer class. 
+
+
+Acknowledgements: I read about Circular Sequence / Buffer on: 
+http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/8-List/array-queue2.html
+to learn about the data structure. 
+
+Files: 
+
+CircularBuffer.cpp: Implementation of a standard CircularBuffer class. 
+Pre-written is a default constructor, an overloaded constructor, a destructor,
+and an addAtBack function that adds a given element to the back of the list, and
+a removeFromBack function that removes the last element of the list, and a print
+function that prints the contents of the Buffer, one element per line.  
+
+
+CircularBuffer.h: Interface of CircularBuffer class. 
+
+Queue.cpp: Implementation of Queue class. There is a default 
+constructor and destructor, but there is nothing to do here because 
+the buffer constructor and destructor runs automatically. A print function
+is provided for you to use during testing. 
+
+Queue.h: Interface of Queue class. The Queue is 
+implemented using a CircularBuffer. It has one private data member: 
+CircularBuffer queue.
+
+
+Stack.cpp: Implementation of Stack class. There is a default
+constructor and destructor, but there is nothing to do here because 
+the buffer constructor and destructor runs automatically. A print function
+is provided for you to use during testing. 
+
+
+Stack.h: Interface of the Stack class. The Stack is
+implemented using a CircularBuffer. It has one private data member: 
+CircularBuffer stack.
+
+Data Structures: The main data structure of this lab is a circular buffer.
+A circular buffer is a dynamic buffer with the unique property that the
+end of the array "wraps around" to the start of the array. This gives users
+the ability to add elements to the front and remove elements from the front. 
+
+
+Testing: 
+I tested my functions using unit_test.h, then added print statements when I had
+errors to be able to fix them. I did this for all three data structures that 
+we were given. The errors in my ceo that remain come down to whitespace.

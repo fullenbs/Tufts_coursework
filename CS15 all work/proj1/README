@@ -1,0 +1,182 @@
+/**********************************************************
+* Project 1: Metro Simulator
+* CS 15
+* README
+*
+*********************************************************/
+
+Compile/run:
+     - Compile using
+            make MetroSim
+     - run executable with
+            ./MetroSim stationsFile passFile [commands]
+     - Compile tests with:
+           make testing_main
+     - Run executable with
+          ./test stationsFile passFile 
+     Note: As explained later on, it is best to leave some tests uncommented
+     for testing_main.
+
+
+Program Purpose:
+Simulate the green line, having a train able to move from station to station,
+along with being able to add passengers and then remove them when they reach 
+their destination. 
+
+Acknowledgements: 
+I used cppreference.com to figure out how to use vectors, along with helping
+me figure out how to use some other built in c++ methods that were useful.
+
+Files: 
+
+main.cpp:
+     Runs metrosim simulation. 
+
+MetroSim.cpp:
+     Contains implementation for MetroSim class, including code for all
+     key gameplay operations, including storing the train.
+
+MetroSim.h:
+     Header file for MetroSim class. 
+
+the_metroSim:
+     reference implementation for students to see how it all works 
+
+PassengerQueue.cpp:
+     Implementation of PassengerQueue class. Carries out operations list in 
+     project spec, performs all operations needed for a queue.
+
+Passenger_Queue.h:
+     Interface for PassengerQueue class. 
+
+Passenger.cpp
+     Implementation for Passenger struct
+
+Passenger.h
+     Interface for Passenger class.
+
+unit_tests.h
+     Stores tests used for Passenger_Queue and Passenger. Broken up for
+     usability and abstraction purposes. All tests from week 2 need week 1 to
+     work.
+
+station.h
+     Header file for station class, stations stored as a vector with each
+     element having a queue and a name.
+
+station.cpp
+     Implementation for station class. 
+
+testing_main.cpp
+     Contains all tests for the train class, station class, and metrosim class.
+     Done in a testing_main to use File I/O. Though none of the functions
+     crash the code, it's best to leave the final test, test_it_all commented 
+     out, or all other tests commented out, as that test allows you to play 
+     the game, which can make it difficult to see other test results.
+
+small_stations.txt
+     Example input with two stations, for testing purposes.
+
+medium_stations.txt
+     Another example input with 10 stations, created for testing purposes.
+
+stations.txt:
+     an example file containing a list of stations.
+
+test_commands.txt:
+     sample list of commands that you could give to the simulator
+
+mytest.txt:
+     A list of commands that can be run in by the simulation.
+
+Data Structures:
+     The data structure implemented for PassengerQueue is a queue, which is a
+     list that only allows the user to add elements at the end and remove them
+     from the front. An advantage of a queue is that by being restrictive,
+     it limits our ability for us or the client to make errors when adding
+     functions or data.
+
+     I used a vector for the train and station data structures. I chose this
+     because I often wanted to reference specific elements, which is easier
+     to do in a vector, while the built in list implementation doesn't event
+     have an elementAt() equivalent function. Also, there isn't a really big
+     drop off in terms of speed using a vector over a linked list. For 
+     my station class, I only add to the end and never remove a station. For
+     my train, while I have to be able to remove an element from anywhere, 
+     this is only when the train moves, and I only add passengers to the end
+     of the train, which is of equivalent complexity to if a linked list were
+     used.
+
+Testing:
+Phase 1 testing:
+     I started with Passenger and then tested 
+     PassengerQueue. Because I am using C++'s list, there weren't really any 
+     specific edge cases I had to account for, as C++ accounts for them behind
+     the scenes. Any bugs I had were the result of typos in unit_test
+     or my code. The main scenarios I tested my code under were dealing with
+     an empty and nonempty queue, as some of functions like dequeue do not work 
+     under an empty list. Also, through playing with the reference, a lot
+     empty queues would be present so I needed to make sure I handled them 
+     well.
+
+Phase 2 testing:
+     All phase 2 testings are in testing_main.cpp, where the specifics of each 
+     test is explained.
+
+Station test: 
+     For testing my stations, I checked that my code could read in 
+     a list of stations, handle getting a new passenger at a station, and then 
+     print everything out properly. The specifics of each test are fully 
+     explained in testing_main.cpp. In general, for the first two categories, I 
+     read in a file then used some if statements to check for the correct
+     output. For my print tests, I didn't write an assert equivalent,
+     and I chose to manually check the outputs. I did this because I knew I 
+     would eventually diff test my entire project, and any errors in the print 
+     statement would be caught there. I also have a variety of getter functions
+     that allow me to interact with the queues stored at each station, since 
+     the queue itself is private. Theseh helper functions are get_front(), 
+     remove_from_queue(), and queue_size(). I didn't write individual tests for
+     them as they essentially allowed me to carry out interactions from week
+     1 that I already knew worked, which in this case are dequeueing, getting
+     the first element, and getting the queue size. They were indirectly 
+     tested in MetroSim, as the train cannot correctly move stations without
+     them working. 
+
+MetroSim test
+     For MetroSim I tested each part of the code individually. I broke it down 
+     into testing each small component. Within testing_main.cpp, I didn't rely 
+     on many boolean comparisons, as I knew if I was able to arrive at an 
+     output, then I could diff test to check that it was displayed correctly. 
+     Also, since metrosim uses my station class, which I knew worked, I didn't
+     have to do as much testing, since if functions implemented in my queue and
+     station class were called correctly, then I knew my code would work. One 
+     bug that I ran into was that I was using cin rather than getline to read in
+     my command lines. It took me a while to fix this as I thought the error was
+     in how I was processing the command. Eventually, I realized the error was 
+     with how I was reading in my strings in command, once I realized this, 
+     I was able to fix it correctly. Not much testing was needed for the train,
+     because I had initially implemented the train as it's own class, which 
+     I had written tests for and knew it worked. When I moved the train over,
+     I just changed the location of some code, not the code itself, so all I 
+     needed to do was make sure the train carried out it's properties correctly,
+     which can be seen through other tests and through diff testing.
+
+
+Diff testing and usage testing:
+     While I did some early testing to check that I was getting the correct 
+     output, as I mentioned I waited to thoroughly check it until I used diff
+     testing, as I knew something would fall through the cracks. I treated diff 
+     testing a bit like a final check, as it should catch most things wrong 
+     with my game. For diff testing, I ran both implementations using 
+     test_commands.txt and mytest.txt then compared the results. The one issue 
+     I had was that when I was printing out the stations, I was also printing 
+     out "Name:", which caused me to fail the diff test. Once I fixed that, I 
+     had no errors. Furthermore, I was able to do a fair amount of testing just
+     by playing my simulation, and checking that actions were carried out 
+     correctly.
+
+Part that you found most difficult:
+     Handling file I/O was the most difficult part of week 2. I was just looking
+     back and forth on the reference document the entire time, and still didn't 
+     fully understanding what I was coding. That made debugging issues with 
+     File I/O a lot harder.  

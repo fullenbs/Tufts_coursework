@@ -1,0 +1,22 @@
+p 0 1
+p 0 2
+m m
+p 1 0
+p 4 7
+m m
+m m
+m m
+m m
+p 5 10
+p 7 8
+p 7 7
+m m
+m m
+m m
+m m
+m m
+m m
+m m
+m m
+m m
+m f

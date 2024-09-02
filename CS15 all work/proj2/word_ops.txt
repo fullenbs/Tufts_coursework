@@ -1,0 +1,6 @@
+2 drop print
+3 4 swap print
+dup print
+clear
+5 #t swap print
+quit

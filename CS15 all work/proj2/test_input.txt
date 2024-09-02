@@ -1,0 +1,9 @@
+7 2 3 * 4 print
+swap print
+drop swap 5 * mod 2
+/ 0
+print
+dup print
+- 2
+3 < 4 > 5 <= 6 ==         #t 2    == 
+{ 1 5 * print { 2 5 + print } } exec print   

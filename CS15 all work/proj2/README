@@ -1,0 +1,105 @@
+/**********************************************************
+* Project 2: CalcYouLater
+* CS 15
+* README
+* Scott Fullenbaum
+*
+*********************************************************/
+
+Compile/Run:
+testing_main:
+- Compile using make testing_main
+- Run executable with ./testing_main
+- To compile testing_main, you need to move parse_cmd(), print_top(), and 
+word_cmds() from private to public in RPNCalc.cpp. The file will not comply
+unless you make these changes.
+
+CalcYouLater
+- Compile using make CalcYouLater
+- Run executable with ./CalcYouLater
+
+-------------------------------------------------------------------------------
+Acknowledgements:
+C++ reference, for reminding me about 50 times that the parameters for 
+str.subtr() are first char and length, not first and last char (which it 
+should be).
+I think I also used it to help with some File I/O stuff, but that was the big
+one.
+
+-------------------------------------------------------------------------------
+Purpose:
+Write a calculator that operates on RPN and can handle a variety of complex 
+operations including basic math, boolean logic, and a bunch of other stack
+manipulations.
+
+Files:
+DatumStack.h
+- Header file for DatumStack class
+
+DatumStack.cpp
+- Implementation file for DatumStack class
+
+testing_main.cpp
+- Contains all tests for DatumStack and parser
+
+RPNCalc.cpp
+- Contains implementation for RPNCalc class
+
+RPNCalc.h
+- Contains interface for RPNCalc class
+
+Makefile
+- Makes executables
+
+Unit_test.h
+- Literally empty because I can't submit without it existing
+
+-------------------------------------------------------------------------------
+Data structures:
+The primary data structure used for this is a stack. A stack is a list with
+restrictive access, where elements can only be pushed and popped from the front
+of the list. The advantage of using a stack is that it limits the ability to
+make user error, as they can't manipulate anything other than the top element.
+
+
+-------------------------------------------------------------------------------
+Testing:
+Phase 1:
+For DatumStack, I made sure to test each function, thinking of any edge cases
+that might emerge. For Parser, I just tested it with a case or two, and 
+it worked with the autograder, which was good enough for me.
+
+
+Phase 2:
+For testing each command, I tested two primary scenarios:
+Correctly calling a function, and incorrectly calling a function. There are
+a couple exceptions where an operation is properly called, but fails for some
+other reason, like dividing by zero. Those cases are mentioned when found and
+tested. For the simpler commands this process was pretty straight forward. The
+specifics of the tests run are explained in testing_main.
+The only RPNCalc functions not covered in testing_main are file, exec, and if.
+All tests used for these cannot be found in testing_main for the following 
+reasons:
+1. When testing file() I knew my commands worked, so I just needed to make
+sure I could read in a file sucessfully. I wrote a test file and just made sure
+that it would run.
+2. For testing exec(), there were several cases I ran into that required me to 
+change my implementation. By now, I think I've rewritten the function at least 
+five times. I was initially able to only get it to work without nested RStrings.
+Next, I got it to work with just one nested RString. Then I got it to work when
+additional inputs were given before a nested RString, then I was able to get it
+to work for inputs after a nested RString, and lastly I got my program to work
+with multiple nested rstrings.I didn't put tests because I kept realizing 
+through compiling CalcYouLater that my code wasn't working for certain
+scenarios.
+
+Diff testing:
+I'm not including the test files, but I had a couple files that I ran to diff 
+test. Each performed a bunch of operations, then printed out the result to a
+file for cerr and a file for cout. In general, I tested the following scenarios:
+Math operations (valid and invalid) 
+Boolean comparisons (valid and invalid)
+Exec (Different variations of nested if statements)
+I also tested with some of the cylc files and some if statements.
+
+I passed all diff tests.

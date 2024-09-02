@@ -1,0 +1,82 @@
+/*****************************************************************************/
+* HW 1: Array List
+* Comp 15 Spring 2021 
+* README
+* Author: Scott Fullenbaum sfulle03
+******************************************************************************/
+
+Program Purpose:
+---------------
+
+The purpose of the program is to create a class for the purpose of storing an 
+ArrayList of characters.
+
+Compile/run:
+-----------
+I compiled and tested the program using unit_test, though the makefile would 
+also compile it.
+
+
+Acknowledgments:
+---------------
+Thanks to Mateo for spending about an hour with me figuring out a Valgrind 
+error at OH.
+
+Files provided:
+-----
+
+ArrayList.h: Interface for the ArrayList.
+
+ArrayList.cpp: Implementation of the ArrayList Class.
+
+unit_tests.h: A unit testing file for the ArrayList Class. 
+Runs in conjunction with the unit_test framework to allow for testing of 
+individual functions.
+
+Makefile: File used to build the program
+
+README: This file
+
+
+Data Structures:
+---------------
+The data structure of this lab is an ArrayList, which is a dynamically
+expanding array. If the number of items is equal to the capacity, the
+ArrayList will automatically expand, allowing for an arbitrary number of
+elements to be inserted into the ArrayList. An ArrayList's dynamic 
+size is the main advantage of using it. 
+A disadvantage of using an ArrayList is that it becomes more expensive 
+to insert/remove the ArrayList at certain locations as it becomes
+larger. This is because with a few exceptions, you have to move other
+ArrayList elements. For example, when adding to the front, you must move all 
+other elements one index back. 
+
+
+Testing:
+-------
+I developed at least one test for each public and private function that I 
+wrote. First, I made sure that my constructors and getter functions, like 
+isEmpty() and size() worked. I made sure these worked as I thought I'd 
+end up using them in most, if not all of my testing and functions in some
+capacity. I also wanted to make sure that toString() worked properly, as
+it's a useful tool to check any ArrayList outputs and determine any errors 
+when manipulating the ArrayList indices, as could see all outputs. For each 
+function, I thought of a standard case and then any potential corner cases 
+that might show up. An example of this would be for elementAt(), where my base 
+case would properly get an element, and a corner case would be an out of bounds 
+index is chosen and I would need to throw an error message. I followed this 
+process for each of my public and private functions. There were also several 
+functions that were tested without needing a test specifically devoted to them.
+PushAtMid() is tested via insertAt(), as that is the only place it can be 
+called. A couple of my functions, such as clear() and expand(), were tested 
+by printing out values within the function, as since the way to make sure they
+worked was checking that capacity had it's value changed, and capacity is 
+private. Also, after I received back my autograder results, added more tests 
+to some of the functions I had more trouble writing, like the overloaded 
+constructor and overloaded assignment operator, to check if I had missed 
+anything. Them I realized I had dealt with some of the memory incorrectly, 
+so I fixed it the functions. 
+Lastly, when dealing with some tricky Valgrind issues, Mateo told me at OH one 
+trick was to make a main file, as I can't see what line the Valgrind error is 
+traced to via unit_test, provided I delete it afterwards. I did this to figure
+out why I was losing some memory from the overloaded assignment operator.

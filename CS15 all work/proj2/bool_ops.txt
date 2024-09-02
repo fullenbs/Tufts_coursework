@@ -1,0 +1,11 @@
+#t < print
+2 3 == print
+4 5 > print
+#f not print
+clear
+#t #t == print
+5 6 >= print
+6 5 <= print
+clear
+2 #t < print
+quit
