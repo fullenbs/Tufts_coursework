@@ -1,0 +1,4 @@
+Prof: Loring Tu
+Class: Real Analysis I 
+Textbook: Analysis by Fitzpatrick
+
