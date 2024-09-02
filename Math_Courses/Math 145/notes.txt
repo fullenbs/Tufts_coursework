@@ -1,0 +1,5 @@
+Prof: Genevieve Walsh
+Class: Abstract Algebra I 
+Textbook: M.A. Armstrong Groups & Symmetry 
+
+Notes: Awful textbook
