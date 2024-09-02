@@ -1,0 +1,71 @@
+\documentclass [12pt] {article}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,bm}
+\usepackage{xfrac}
+\usepackage{html}
+\usepackage[backref,letterpaper]{hyperref}
+
+\textheight 9.0in
+\textwidth 6.5in
+\oddsidemargin -0.225in
+\evensidemargin -0.225in
+\topmargin -0.5in
+%\baselineskip=10pt
+
+\newcommand{\bfdelta}{{\bm{\delta}}}
+\newcommand{\bfnu}{{\bm{\nu}}}
+\newcommand{\bff}{{\bm{f}}}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\calD}{{\mathcal{D}}}
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\calL}{{\mathcal{L}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\calS}{{\mathcal{S}}}
+\newcommand{\bfu}{{\mathbf{u}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+\newcommand{\bfx}{{\mathbf{x}}}
+\newcommand{\bfy}{{\mathbf{y}}}
+\newcommand{\bfz}{{\mathbf{z}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bfzero}{{\mathbf{0}}}
+\newcommand{\bfone}{{\mathbf{1}}}
+\newcommand{\Var}{{\mbox{Var}}}
+\newcommand{\notsubseteq}{{\subseteq \hspace{-0.15in}/\;}}
+\newcommand{\nin}{\notin}
+\newcommand{\addlink}[2]{{\htmladdnormallink {\textcolor{blue}{{#1}}}{{#2}}}}
+\newcommand{\Prob}{{\mbox{Prob}}}
+\newcommand{\supp}{{\mbox{supp}}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+Tufts University\\
+Department of Mathematics\\
+Spring 2022 \\
+\end{center}
+\begin{center}
+{\bf MA 166: Statistics}\\
+\end{center}
+\begin{center}
+{\bf\Large Homework 4 {\small (v1.0)}}~\footnote{\copyright 2022, Bruce M. Boghosian, all rights reserved.}\\
+Assigned Monday 14 February 2022\\
+Due Monday 21 February 2022 at 11:59 pm EDT.
+\end{center}
+
+\begin{enumerate}
+
+\item Larson \& Marx, Problem 5.7.3
+
+\item In the lecture on Bayesian statistics (Lecture 08), the description of the algorithm for Bayesian searches demonstrates in detail how the prior for region $r_j$, namely $P(A_j)$, should be updated immediately after an unsuccessful search of region $r_j$.  It does not go into much detail about how $P(A_k)$ should be updated for $k\neq j$ as a result of the same search.  Fill in those details to derive the boxed result on slide 13 of that lecture.
+
+\item Let's suppose that Captain Kidd's long-lost missing treasure has been isolated to three large regions, each of 100 square miles, off of the coast of Rhode Island.  The first and third regions are reasonably shallow, so if the treasure is in one of them and it is searched, the probability of finding it is 0.9.  The second region is significantly deeper, so if the treasure is there and it is searched, the probability of finding it is only 0.7.  Based on historical accounts of Kidd's voyage from the Caribbean to Boston, you would assign probabilities of 0.4, 0.1 and 0.5 that the treasure is in each of regions 1, 2 and 3, respectively.  What are the first five regions that you would search in a Bayesian search, assuming that all (except possibly the last) turn out to be unsuccessful?  Explain in words why searching the regions in this order is sensible.  [You may use a computational aid, such as Excel or Mathematica, or a computer language of your choice to do this problem.]
+
+\item Larson \& Marx, Problem 5.8.1
+
+\end{enumerate}
+
+\end{document}

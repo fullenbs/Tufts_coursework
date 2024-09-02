@@ -1,0 +1,89 @@
+\documentclass [12pt] {article}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,bm}
+\usepackage{xfrac}
+\usepackage{html}
+\usepackage[backref,letterpaper]{hyperref}
+
+\textheight 9.0in
+\textwidth 6.5in
+\oddsidemargin -0.225in
+\evensidemargin -0.225in
+\topmargin -0.5in
+
+\newcommand{\bfdelta}{{\bm{\delta}}}
+\newcommand{\bfnu}{{\bm{\nu}}}
+\newcommand{\bff}{{\bm{f}}}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\calD}{{\mathcal{D}}}
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\calL}{{\mathcal{L}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\calS}{{\mathcal{S}}}
+\newcommand{\bfu}{{\mathbf{u}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+\newcommand{\bfx}{{\mathbf{x}}}
+\newcommand{\bfy}{{\mathbf{y}}}
+\newcommand{\bfz}{{\mathbf{z}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bfzero}{{\mathbf{0}}}
+\newcommand{\bfone}{{\mathbf{1}}}
+\newcommand{\Var}{{\mbox{Var}}}
+\newcommand{\notsubseteq}{{\subseteq \hspace{-0.15in}/\;}}
+\newcommand{\nin}{\notin}
+\newcommand{\addlink}[2]{{\htmladdnormallink {\textcolor{blue}{{#1}}}{{#2}}}}
+\newcommand{\Prob}{{\mbox{Prob}}}
+\newcommand{\supp}{{\mbox{supp}}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+Tufts University\\
+Department of Mathematics\\
+Spring 2022 \\
+\end{center}
+\begin{center}
+{\bf MA 166: Statistics}\\
+\end{center}
+\begin{center}
+{\bf\Large Homework 1 {\small (v1.1)}}~\footnote{\copyright 2022, Bruce M. Boghosian, all rights reserved.}\\
+Assigned Monday 24 January 2022\\
+Due Monday 31 January 2022 at 11:59 pm EDT.
+\end{center}
+
+This homework assignment concerns the random variable $X\geq 0$, which may be supposed to have the probability density function
+\[
+f_X(x) = C(\beta)\frac{x^2}{1+e^{\beta x}},
+\]
+where $\beta$ is a parameter and $C(\beta)$ is a normalization constant.  This kind of random variable turns out to be important in physics for understanding the behavior of a certain class of fundamental particles called fermions.  In that context, $\beta$ is related to the inverse of the temperature of the fermions, so it is something that one might wish to measure experimentally.  Some examples of this distribution for various values of $\beta$ are illustrated below.
+\begin{center}
+\mbox{
+\includegraphics[bbllx=2,bblly=3,bburx=323,bbury=171,width=4.0in]{fig.Problem1.eps}
+}
+\end{center}
+
+The following definite integrals may be useful for the problems in this assignment,
+	\begin{align*}
+	\int_0^\infty dz\; \frac{z^2}{1+e^z} =& \frac{3}{2}\zeta(3)\\
+	\int_0^\infty dz\; \frac{z^3}{1+e^z} =& \frac{7\pi^4}{120}\\
+	\int_0^\infty dz\; \frac{z^4}{1+e^z} =& \frac{45}{2}\zeta(5),
+	\end{align*}
+where $\zeta(n) := \sum_{j=1}^\infty\frac{1}{j^n}$ is called the \textit{Riemann zeta function}.  You don't need to know anything about $\zeta(3)$ and $\zeta(5)$ except that they are constants, and you can simply write them as $\zeta(3)$ and $\zeta(5)$ most of the time, and not worry about their numerical values.  In case you should need their numerical values, they are approximately $\zeta(3) = 1.2020569\ldots$ and $\zeta(5) = 1.0369277\ldots$.
+
+\begin{enumerate}
+
+\item Find an expression for the normalization constant $C(\beta)$ so that $\int_0^\infty dx\; p_X(x)$ is equal to one.  As the notation indicates, you should expect this normalization constant to depend on the parameter $\beta$.  With this normalization constant, write the normalized distribution.
+
+\item Now suppose that you have a list of experimental data, $X_j=x_j$ for $j=1,\ldots,n$, which you expect to be distributed according to the given density function, but you do not know the value of the parameter $\beta$, and you would like to infer it from the data.  Find an equation for the maximum likelihood estimate of $\beta$, call it $\beta_{e}$.  (You will not be able to solve this equation in general for $\beta_{e}$.  All you need for your answer is the equation itself.)
+
+\item Repeat the last problem, but this time use method of moments to find an estimate for $\beta$, call it $\beta_{m}$.  This time, you will be able to find a solution for $\beta_{m}$, and you should provide that for your answer.
+
+\item Suppose that you conduct $n$ trials, and you miraculously find the same value $x_j=1$ all $n$ times.  You still won't be able to find an analytic solution to the equation you obtained for the maximum likelihood estimate $\beta_e$, but you should be able to reduce it to something very simple, so that you can solve what remains either graphically or using a root-finding calculator, or a software tool like \textit{Mathematica}.  Do so, and compare your numerical result to $\beta_m$, the method of moments estimate.  Explain how you can make sense of the approximate values of your estimates from the plots of $p_X(x)$ given on the first page of this assignment.
+
+\end{enumerate}
+
+\end{document}

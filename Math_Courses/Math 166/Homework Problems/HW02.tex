@@ -1,0 +1,92 @@
+\documentclass [12pt] {article}
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,bm}
+\usepackage{xfrac}
+\usepackage{html}
+\usepackage[backref,letterpaper]{hyperref}
+
+\textheight 9.0in
+\textwidth 6.5in
+\oddsidemargin -0.225in
+\evensidemargin -0.225in
+\topmargin -0.5in
+%\baselineskip=10pt
+
+\newcommand{\bfdelta}{{\bm{\delta}}}
+\newcommand{\bfnu}{{\bm{\nu}}}
+\newcommand{\bff}{{\bm{f}}}
+\newcommand{\bbC}{{\mathbb{C}}}
+\newcommand{\calD}{{\mathcal{D}}}
+\newcommand{\bbF}{{\mathbb{F}}}
+\newcommand{\calL}{{\mathcal{L}}}
+\newcommand{\bbR}{{\mathbb{R}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\calS}{{\mathcal{S}}}
+\newcommand{\bfu}{{\mathbf{u}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+\newcommand{\bfx}{{\mathbf{x}}}
+\newcommand{\bfy}{{\mathbf{y}}}
+\newcommand{\bfz}{{\mathbf{z}}}
+\newcommand{\bbZ}{{\mathbb{Z}}}
+\newcommand{\bfzero}{{\mathbf{0}}}
+\newcommand{\bfone}{{\mathbf{1}}}
+\newcommand{\Var}{{\mbox{Var}}}
+\newcommand{\notsubseteq}{{\subseteq \hspace{-0.15in}/\;}}
+\newcommand{\nin}{\notin}
+\newcommand{\addlink}[2]{{\htmladdnormallink {\textcolor{blue}{{#1}}}{{#2}}}}
+\newcommand{\Prob}{{\mbox{Prob}}}
+\newcommand{\supp}{{\mbox{supp}}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+Tufts University\\
+Department of Mathematics\\
+Spring 2022 \\
+\end{center}
+\begin{center}
+{\bf MA 166: Statistics}\\
+\end{center}
+\begin{center}
+{\bf\Large Homework 2 {\small (v1.0)}}~\footnote{\copyright 2022, Bruce M. Boghosian, all rights reserved.}\\
+Assigned Monday 31 January 2022\\
+Due Monday 7 February 2022 at 11:59 pm EDT.
+\end{center}
+
+Read the footnotes!  They give important information about how to present your answers.
+
+\begin{enumerate}
+
+\item Suppose that you have a priori knowledge that the continuous random variable $X$ is normally distributed.  You make $n$ experimental measurements of $X$, and you find that $fn$ of the measurements are (miraculously) exactly equal to $+1$, and the other $(1-f)n$ measurements are exactly equal to $-1$.  The fraction $f$ is greater than $\sfrac{1}{2}$, so you think that $X$ has a positive mean, but you are really not sure so you decide to do interval estimation to see with what confidence you can make that claim.  You may assume that $n$ is large enough that the Central Limit Theorem applies to a good approximation.
+	\begin{enumerate}
+	\item Use maximum likelihood estimators to find estimates of the mean, $\mu_e$, and the standard deviation, $\sigma_e$.
+	\item We are going to use $\mu_e$ and $\sigma_e$ as the basis for interval estimation in the remainder of this problem~\footnote{As we shall see later, $\sigma_e$ is not the optimum value to use for interval estimation, and the sample standard deviation for the normal distribution is usually defined in a different way.  We have not yet covered that material however, so for the purposes of this problem you may proceed as instructed.}.  Suppose that you find you are able to conclude that $X$ is positive with confidence probability $100(1-\alpha)\%$.  Find an expression for $n$ in terms of $f$ and $\alpha$~\footnote{Feel free to use the $z_\alpha$ notation described in the text on page 298}.
+	\item To make the above concrete, suppose that $f=0.51$.  How large does $n$ need to be to achieve $95\%$ confidence that the mean of $X$ is positive?
+	\end{enumerate}
+
+\item Suppose that you have a priori knowledge that the continuous random variable $Y$ has the following two-parameter probability density function:
+\[
+f_Y(y) = \left\{
+\begin{array}{ll}
+\frac{1}{\mu-a}\exp\left(-\frac{y-a}{\mu-a}\right) & \mbox{for $y\geq a$}\\
+0 & \mbox{otherwise,}
+\end{array}
+\right.
+\]
+where it may be assumed that $a \geq 0$ and $\mu>a$.
+	\begin{enumerate}
+	\item Verify that the density function is normalized, and fine the theoretical mean and standard deviation of $Y$ in terms of the parameters $a$ and $\mu$.
+	\item Find maximum likelihood estimators, $\hat{a}_{\mbox{\tiny mle}}$ and $\hat{\mu}_{\mbox{\tiny mle}}$, for the parameters $a$ and $\mu$.  Justify your reasoning carefully, particularly for the calculation of $\hat{a}_{\mbox{\tiny mle}}$.
+	\item Now suppose that you take $n$ samples of this data, $y_1,\ldots,y_n$, where $n$ is large enough that the Central Limit Theorem applies to a good approximation.  (You may assume that the sample mean that you find is positive.)  Find the $100(1-\alpha)\%$  confidence interval for $\mu = E(Y)$ centered at the sample mean.  You may leave your answer in terms of $\hat{a}_{\mbox{\tiny mle}}$ and $\hat{\mu}_{\mbox{\tiny mle}}$ worked out in part (b).
+	\end{enumerate}
+
+\item Larsen \& Marx, Problem 5.3.6, page 306
+
+\item Larsen \& Marx, Problem 5.3.15, page 307
+
+\end{enumerate}
+
+\end{document}
