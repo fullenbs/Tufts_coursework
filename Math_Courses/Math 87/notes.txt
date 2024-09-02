@@ -1,0 +1,6 @@
+Prof: Arkhadz Kirshtein
+Class: Mathematical modeling
+Textbook: None 
+
+Notes: Code backed up elsewhere, should merge for simplicity. Botched the first 
+midterm, did pretty good on the rest.
