@@ -1,0 +1,82 @@
+Project 2
+written.text
+
+Name: Scott Fullenbaum
+Login ID: sfulle03
+
+
+Written #1:  How much time I spent on this assignment
+-----------------------------------------------------
+
+Please estimate of the amount of time you spent on this assignment
+(each week) in hours, e. g., 6.5 hours.  Be as accurate as you can,
+but we know you are not keeping a timer going: just give your best
+estimate.
+
+Week 1 time: 5-6 hours
+Week 2 time:
+
+
+Written #2:  How I tested my code
+---------------------------------
+
+Week 1 testing:
+Card class testing:
+To test the card class, I created several card objects and tested if I could 
+correctly get the outputs and that the member functions worked properly. 
+
+CardLinkedList.cpp testing:
+I decided to test memory leakage at the end, as I'm least comfortable with 
+that, but other than that, I had 8 tests that I needed to run for the linked 
+list. I needed six tests in total for adding/removing a node, as adding/
+removing at the beginning, middle, or end requires different functions. To 
+test, I created a linked list, and then added or removed specific nodes from 
+it. I ran into some issues with inserting/removing a node at the middle. I 
+fixed this by changing my pointers a bit and made a drawing to make sure it 
+worked. I tested get_card_at() by using it to display the value of each node. 
+Finally, I made sure num_cards() was working and being updated properly by 
+making sure the rest of my code was giving correct results, as I used it to 
+determine a bunch of other things in my linked list or testing code.
+
+Deck.cpp testing:
+I tested both constructors by creating an object using both of them, and then 
+printing to make sure it gave the correct output. To test number_of_cards(), I 
+ran it on a file and made sure the correct output was displayed. Then, to test 
+inspect_top_card(), I ran the code with several files and the 
+inspect_top_card() function to make sure the top card was displayed properly. 
+To test draw_top_card(), I repeated a similar process. I ran into a bug where I 
+realized I was returning the incorrect card and was not removing it correctly. 
+Finally, I tested add_card_at() by adding a bunch of cards to a Deck and then 
+displaying the output. 
+
+Valgrind testing:
+I saved this for last as I was the least confident as to how I could go around 
+and verify this. I ran into some initial memory loss when running all of my 
+debugging code, so to fix this, I went function by function testing each 
+individual one to see where the memory loss was. I eventually figured it out 
+and was able to remove most of the memory issues.
+
+Week 2 testing:
+
+
+Written #3: Your comments on the project
+----------------------------------------
+
+Tell us what you learned from this project.  What did you like about
+it? Do you have any suggestions for improving it? Did you enjoy it?
+Fill in the first section after week 1, and then at the end of week
+2 tell us how things looked then. Don't edit your week 1 comments
+for week 2, but you are welcome to tell us in the second section
+that you've changed your opinion!
+
+Week 1 (tell us your thoughts after week 1):
+I liked the project and really thought it was useful for being able to 
+understand how linked lists work and on how to use them. Also, at it's core, it 
+didn't feel like the project was an insane amount of work. However, I wish that 
+we spent a little more time on understanding Valgrind. Beyond the fact that I 
+want 0 bytes of memory lost, I really didn't understand what was going on with 
+Valgrind, and think it would have made the debugging process a little easier if 
+I did. 
+
+
+Week 2 (add additional comments after week 2):
