@@ -1,0 +1,3 @@
+Professor: Sebastian Bozlee
+Class: Topology
+Textbook: Munkres 
