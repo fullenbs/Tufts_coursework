@@ -1,0 +1,153 @@
+Project 2
+written.text
+
+Name: Scott Fullenbaum
+Login ID: sfulle03
+
+
+Written #1:  How much time I spent on this assignment
+-----------------------------------------------------
+
+Please estimate of the amount of time you spent on this assignment
+(each week) in hours, e. g., 6.5 hours.  Be as accurate as you can,
+but we know you are not keeping a timer going: just give your best
+estimate.
+
+Week 1 time: 6-7 hours
+Week 2 time: 5-6 hours
+
+
+Written #2:  How I tested my code
+---------------------------------
+
+Week 1 testing: (Broken up by each class)
+Card class testing:
+To test the card class, I created several card objects and tested if I could 
+correctly get the outputs and that the member functions worked properly. 
+
+CardLinkedList.cpp testing:
+I decided to test memory leakage at the end, as I'm least comfortable with 
+that, but other than that, I had 8 tests that I needed to run for the linked 
+list. I needed six tests in total for adding/removing a node, as adding/
+removing at the beginning, middle, or end requires different functions. To 
+test, I created a linked list, and then added or removed specific nodes from 
+it. I ran into some issues with inserting/removing a node at the middle. I 
+fixed this by changing my pointers a bit and made a drawing to make sure it 
+worked. I tested get_card_at() by using it to display the value of each node. 
+Finally, I made sure num_cards() was working and being updated properly by 
+making sure the rest of my code was giving correct results, as I used it to 
+determine a bunch of other things in my linked list or testing code.
+
+Deck.cpp testing:
+I tested both constructors by creating an object using both of them, and then 
+printing to make sure it gave the correct output. To test number_of_cards(), I 
+ran it on a file and made sure the correct output was displayed. Then, to test 
+inspect_top_card(), I ran the code with several files and the 
+inspect_top_card() function to make sure the top card was displayed properly. 
+To test draw_top_card(), I repeated a similar process. I ran into a bug where I 
+realized I was returning the incorrect card and was not removing it correctly. 
+Finally, I tested add_card_at() by adding a bunch of cards to a Deck and then 
+displaying the output. 
+
+Valgrind testing:
+I saved this for last as I was the least confident as to how I could go around 
+and verify this. I ran into some initial memory loss when running all of my 
+debugging code, so to fix this, I went function by function testing each 
+individual one to see where the memory loss was. I eventually figured it out 
+and was able to remove most of the memory issues.
+
+
+
+
+
+Week 2 testing: (Broken up by each test)
+Fixing last week:
+I some how messed up and wrote a bug that essentially prevented 
+nodes from even being added and caused me to fail all the tests, so I fixed 
+that. I also had a couple of other bugs that I found throughout working 
+on week 2 that I ended up fixing.
+
+Hand.cpp:
+To test, I first ran with the losing and winning hands to make sure that the 
+print() function was working properly. To test the other functions, I ran them 
+on normal and edgecases in test_hand.cpp to make sure they were functioning 
+properly. I didn't do much testing as this is pretty similar to deck.cpp. 
+
+Rackoplayer.cpp:
+For testing, I used test_rackoplayer to play a lot of one player racko. I 
+didn't create my own deck. Before I played, I ran the TA/professor developed 
+version and took note of the various scenarios and edge cases that I should be 
+wary of. While playing, I tested all of these scenarios. I had an issue with 
+removing the correct card, which was fixed when I realized I made an incorrect 
+function call within my linked list.
+
+Racko.cpp:
+Once I wrote Racko.cpp, I tested it by further playing Racko. I also used the 
+TA/professor designed version of the game to serve as a reference for anything 
+in my own code. I had some issues getting play_the_game to work properly, and 
+couldn't think of the modulus solution. To test, I started printing out i, my 
+loop counter, at every possible scenario to see what parts of my logic were 
+being run so that I could fix the issue. 
+
+Valgrind testing:
+Once I wrote my code, I ran valgrind. After seeing valgrind errors that I 
+couldn't just delete gs_p and had to delete each pointer within the struct, I 
+had no more valgrind issues.
+
+Diff testing: 
+Since there's a lot of text in the screen, I wanted to make sure my file 
+outputs were correct. I did this test at the end, so I knew that my game ran
+properly, but wasn't fully sure if the text ouputs would match. I created an 
+input file by running the game and creating a series of game actions that would 
+result in a win, which can be seen in test_input.txt. Since this was more for 
+catching typos, I didn't bother as much with testing edge cases, for some of 
+them like running out of cards, I just ran them on both to check if the end 
+state mattered. I had a couple typos that diff caught, but then there was also 
+a 6 showing up out of place in my file that wasn't in the premade version. 
+After testing it again to make sure I didn't do anything that added it, I 
+realized it was being added when I discarded a card. After tracing it back to 
+the linked list, I realized there was a debugging print statement, that I had 
+forgotten to delete which printed the value of the last card in my hand which 
+was 6. Coincidentally, I only discarded the last card in my hand once  in 
+test_input. I removed this and had no diff errors. 
+
+
+
+Written #3: Your comments on the project
+----------------------------------------
+
+Tell us what you learned from this project.  What did you like about
+it? Do you have any suggestions for improving it? Did you enjoy it?
+Fill in the first section after week 1, and then at the end of week
+2 tell us how things looked then. Don't edit your week 1 comments
+for week 2, but you are welcome to tell us in the second section
+that you've changed your opinion!
+
+Week 1 (tell us your thoughts after week 1):
+I liked the project and really thought it was useful for being able to 
+understand how linked lists work and on how to use them. Also, at it's core, it 
+didn't feel like the project was an insane amount of work. However, I wish that 
+we spent a little more time on understanding Valgrind. Beyond the fact that I 
+want 0 bytes of memory lost, I really didn't understand what was going on with 
+Valgrind, and think it would have made the debugging process a little easier if 
+I did. 
+
+
+Week 2 (add additional comments after week 2):
+
+I found week 2 to be easier than week 1. I know I say I spent about 5-6 hrs on 
+week 2, but  around an hour of that was me fixing bugs from week 1. In week 1, 
+I felt like I was thrown into the deep end with linked lists. While by the end 
+of week 1 I thought I understood them, I'm realizing that wasn't actually the 
+case and my understanding of them isn't as good as I'd like it to be. As a 
+sidenote, I wish the sample solutions for the lab were made available. For this 
+project especially, I felt like the lab didn't prepare me enough for using 
+linked lists. Having the sample solutions I think would have been a really 
+useful resource, especially over the Thanksgiving break. Overall, I liked week 
+2 more than week 1. Week 2 felt a bit more like it was testing on everything we 
+did this year, which I liked for what's essentially our final project.
+
+Additionally, Diff was a life saver and I wish we were at least given a brief 
+refresher on it, as I had honestly forgotten about it until I went to TA office 
+hours. For a project with this much text, I found it to be a great tool, and 
+definitely would have submitted my code with some typos without it.
